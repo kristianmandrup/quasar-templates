@@ -6,8 +6,8 @@
   "author": "Razvan Stoenescu <razvan.stoenescu@gmail.com>",
   "scripts": {
     "clean": "node build/script.clean.js",
-    "play": "node build/script.dev.js",
-    "build": "node build/script.prod.js",
+    "dev": "node build/script.dev.js",
+    "build": "node build/script.build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",

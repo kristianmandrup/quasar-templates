@@ -14,7 +14,7 @@ console.log(' Opening index.html over file:// won\'t work.\n')
 require('./script.clean.js')
 
 var
-  spinner = ora('Building Quasar App for PRODUCTION...').start()
+  spinner = ora('Building Quasar App...').start()
   ,targetPath = path.join(__dirname, '../dist/')
 
 shell.mkdir('-p', targetPath)
