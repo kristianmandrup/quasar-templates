@@ -1,3 +1,9 @@
+import $ from 'jquery'
+
+window.jQuery = window.$ = $
+import 'velocity-animate'
+import 'velocity-animate/velocity.ui'
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
