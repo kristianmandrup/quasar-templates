@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import 'hammerjs'
 
 window.jQuery = window.$ = $
 import 'velocity-animate'
@@ -8,10 +9,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import Quasar from 'quasar-framework'
 
 Vue.use(Vuex) // State Management
 Vue.use(VueRouter) // Router
 Vue.use(VueResource) // Ajax Requests
+Vue.use(Quasar) // Install Quasar Framework
 
 var router = new VueRouter()
 
@@ -38,10 +41,6 @@ router.map({
   }
 })
 
-/*
-quasar.boot.app(() => {
+Quasar.start(() => {
   router.start(Vue.extend({}), '#quasar-app')
 })
-*/
-
-router.start(Vue.extend({}), '#quasar-app')
