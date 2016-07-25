@@ -1,10 +1,10 @@
 function load (name) {
   if (process.env.NODE_ENV === 'development') {
-    return require('view/' + name + '.vue')
+    return require('component/' + name + '.vue')
   }
   else {
     return (resolve) => {
-      require('bundle?lazy!view/' + name + '.vue')(resolve)
+      require('bundle?lazy!component/' + name + '.vue')(resolve)
     }
   }
 }

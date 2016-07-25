@@ -19,8 +19,7 @@ module.exports = {
       'quasar': path.resolve(__dirname, '../node_modules/quasar-framework/'),
       'src': path.resolve(__dirname, '../src'),
       'asset': path.resolve(__dirname, '../src/assets'),
-      'component': path.resolve(__dirname, '../src/components'),
-      'view': path.resolve(__dirname, '../src/views')
+      'component': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {
