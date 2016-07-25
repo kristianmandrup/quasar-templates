@@ -5,7 +5,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/app.entry.js'
+    app: './src/app.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -16,6 +16,7 @@ module.exports = {
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
+      'quasar': path.resolve(__dirname, '../node_modules/quasar-framework/'),
       'src': path.resolve(__dirname, '../src'),
       'asset': path.resolve(__dirname, '../src/assets'),
       'component': path.resolve(__dirname, '../src/components'),

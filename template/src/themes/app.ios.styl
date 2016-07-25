@@ -1,6 +1,6 @@
 // App Shared Variables
 // --------------------------------------------------
-// Shared Sass variables go in the app.variables.scss file
+// Shared Stylus variables go in the app.variables.styl file
 @import 'app.variables'
 
 
@@ -18,7 +18,6 @@ $generic-input-size            ?= 30px
 $generic-input-border-width    ?= 2px
 
 $typography-font-family     ?= '-apple-system', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$typography-font-size       ?= 1rem
 $typography-p-margin        ?= .5rem 0 1rem 0
 $typography-p-line-height   ?= 1.4rem
 
@@ -27,9 +26,4 @@ $typography-p-line-height   ?= 1.4rem
 // --------------------------------------------------
 // Custom App variables must be declared before importing Quasar.
 // Quasar will use its default values when a custom variable isn't provided.
-@import '~quasar-frameowrk/dist/quasar.ios'
-
-
-// App iOS Design Only Stylus
-// --------------------------------------------------
-// CSS that should only apply to the iOS Design app
+@import '~quasar-framework/dist/quasar.ios'

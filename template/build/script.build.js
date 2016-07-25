@@ -1,20 +1,19 @@
 
 var
-  shell = require('shelljs')
-  ,path = require('path')
-  ,config = require('../config')
-  ,ora = require('ora')
-  ,webpack = require('webpack')
-  ,webpackConfig = require('./webpack.prod.conf')
+  shell = require('shelljs'),
+  path = require('path'),
+  config = require('../config'),
+  ora = require('ora'),
+  webpack = require('webpack'),
+  webpackConfig = require('./webpack.prod.conf')
 
 process.env.NODE_ENV = 'production'
 console.log(' Built files are meant to be served over an HTTP server.')
 console.log(' Opening index.html over file:// won\'t work.\n')
 
 require('./script.clean.js')
-
 var
-  spinner = ora('Building Quasar App...').start()
+  spinner = ora('Building Quasar App with "' + (process.argv[2] || 'mat') + '" theme...').start()
   ,targetPath = path.join(__dirname, '../dist/')
 
 shell.mkdir('-p', targetPath)

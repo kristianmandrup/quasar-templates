@@ -9,38 +9,23 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import Quasar from 'quasar-framework'
+import VueTouch from 'vue-touch'
+import Quasar from 'quasar'
+
+Quasar.theme.set(__THEME)
+require('./themes/app.' + __THEME + '.styl')
 
 Vue.use(Vuex) // State Management
 Vue.use(VueRouter) // Router
 Vue.use(VueResource) // Ajax Requests
+Vue.use(VueTouch) // Touch events
 Vue.use(Quasar) // Install Quasar Framework
 
-var router = new VueRouter()
+let router = new VueRouter()
 
-function load (name) {
-  if (process.env.NODE_ENV === 'development') {
-    return require('view/' + name + '.vue')
-  }
-  else {
-    return (resolve) => {
-      require('bundle?lazy!view/' + name + '.vue')(resolve)
-    }
-  }
-}
-
-router.map({
-  // Not found
-  '*': {
-    component: load('404')
-  },
-
-  // Default
-  '/': {
-    component: load('index')
-  }
-})
+import routes from './routes'
 
 Quasar.start(() => {
+  router.map(routes)
   router.start(Vue.extend({}), '#quasar-app')
 })
