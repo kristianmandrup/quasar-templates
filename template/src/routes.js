@@ -1,3 +1,7 @@
+/*
+  Avoid lazy loading while in dev mode
+  to benefit from HMR
+ */
 function load (name) {
   if (process.env.NODE_ENV === 'development') {
     return require('component/' + name + '.vue')

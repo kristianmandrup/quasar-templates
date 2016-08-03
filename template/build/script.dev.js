@@ -63,4 +63,5 @@ module.exports = app.listen(port, function (err) {
   }
   console.log('Running with "' + (process.argv[2] || 'mat') + '" theme')
   console.log('Listening at http://localhost:' + port + '\n')
+  console.log('Building. Please wait...')
 })
