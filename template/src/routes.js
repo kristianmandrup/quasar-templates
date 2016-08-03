@@ -12,7 +12,7 @@ function load (name) {
 export default {
   // Not found
   '*': {
-    component: load('404')
+    component: load('error404')
   },
 
   // Default

@@ -1,4 +1,6 @@
 <template>
+  <!-- Place content inside a root node -->
+  <div></div>
 </template>
 
 <script>
