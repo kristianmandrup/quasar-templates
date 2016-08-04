@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '',
+    publicPath: process.env.NODE_ENV === 'production' ? config.build.publicPath : config.dev.publicPath,
     filename: '[name].js'
   },
   resolve: {

@@ -13,7 +13,7 @@ var
 
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
-    loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
+    loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true, postcss: true })
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
