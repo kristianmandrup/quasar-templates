@@ -2,6 +2,7 @@ var
   path = require('path'),
   config = require('../config'),
   utils = require('./utils'),
+  platform = require('./platform'),
   webpack = require('webpack'),
   merge = require('webpack-merge'),
   baseWebpackConfig = require('./webpack.base.conf'),
@@ -31,7 +32,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     // http://vuejs.github.io/vue-loader/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env,
-      '__THEME': '"' + (process.argv[2] || 'mat') + '"'
+      '__THEME': '"' + platform.theme + '"'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

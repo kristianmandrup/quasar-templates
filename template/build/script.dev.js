@@ -3,6 +3,7 @@ var
   express = require('express'),
   webpack = require('webpack'),
   config = require('../config'),
+  platform = require('./platform'),
   proxyMiddleware = require('http-proxy-middleware'),
   webpackConfig = process.env.NODE_ENV === 'testing'
     ? require('./webpack.prod.conf')
@@ -10,6 +11,7 @@ var
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
+
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
 var proxyTable = config.dev.proxyTable
@@ -55,6 +57,9 @@ app.use(hotMiddleware)
 
 // serve pure static assets
 app.use('/statics', express.static('./src/statics'))
+
+// try to serve Cordova statics for Play App
+app.use(express.static(platform.cordovaAssets))
 
 module.exports = app.listen(port, function (err) {
   if (err) {

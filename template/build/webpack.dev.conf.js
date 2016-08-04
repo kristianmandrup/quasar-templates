@@ -3,6 +3,7 @@ var
   webpack = require('webpack'),
   merge = require('webpack-merge'),
   utils = require('./utils'),
+  platform = require('./platform'),
   baseWebpackConfig = require('./webpack.base.conf'),
   HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -20,7 +21,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env,
-      '__THEME': '"' + (process.argv[2] || 'mat') + '"'
+      '__THEME': '"' + platform.theme + '"'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

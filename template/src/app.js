@@ -12,7 +12,6 @@ import VueResource from 'vue-resource'
 import VueTouch from 'vue-touch'
 import Quasar from 'quasar'
 
-Quasar.theme.set(__THEME)
 require('./themes/app.' + __THEME + '.styl')
 
 Vue.use(Vuex) // State Management

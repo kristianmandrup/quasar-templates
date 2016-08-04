@@ -1,6 +1,4 @@
-var
-  path = require('path'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.cssLoaders = function (options) {
   options = options || {}

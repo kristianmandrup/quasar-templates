@@ -30,13 +30,7 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
+        test: /\.(vue|js)$/,
         loader: 'eslint',
         include: projectRoot,
         exclude: /node_modules/
