@@ -2,7 +2,7 @@
   "name": "quasar-app",
   "version": "0.0.1",
   "description": "A Quasar App",
-  "author": "Razvan Stoenescu <razvan.stoenescu@gmail.com>",
+  "author": "Your Name",
   "scripts": {
     "clean": "node build/script.clean.js",
     "dev": "node build/script.dev.js",

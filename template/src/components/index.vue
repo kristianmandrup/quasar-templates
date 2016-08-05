@@ -7,7 +7,9 @@
     </div>
 
     <div class="layout-view">
-      <router-view class="layout-scroll-area"></router-view>
+      <!-- Uncomment if using subRoutes
+        <router-view class="layout-scroll-area"></router-view>
+      -->
     </div>
   </quasar-layout>
 </template>

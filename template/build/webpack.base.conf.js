@@ -1,5 +1,6 @@
 var
   path = require('path'),
+  webpack = require('webpack'),
   config = require('../config'),
   utils = require('./utils'),
   projectRoot = path.resolve(__dirname, '../'),
@@ -20,13 +21,22 @@ module.exports = {
     alias: {
       'quasar': path.resolve(__dirname, '../node_modules/quasar-framework/'),
       'src': path.resolve(__dirname, '../src'),
-      'asset': path.resolve(__dirname, '../src/assets'),
-      'component': path.resolve(__dirname, '../src/components')
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'components': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin()
+  ],
   module: {
     preLoaders: [
       {

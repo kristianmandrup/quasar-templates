@@ -4,11 +4,11 @@
  */
 function load (name) {
   if (process.env.NODE_ENV === 'development') {
-    return require('component/' + name + '.vue')
+    return require('components/' + name + '.vue')
   }
   else {
     return (resolve) => {
-      require('bundle?lazy!component/' + name + '.vue')(resolve)
+      require('bundle?lazy!components/' + name + '.vue')(resolve)
     }
   }
 }
@@ -22,5 +22,9 @@ export default {
   // Default
   '/': {
     component: load('index')
+    /*
+    subRoutes: {
+    }
+    */
   }
 }

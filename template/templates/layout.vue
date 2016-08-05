@@ -10,7 +10,7 @@
     </div>
 
     <!-- Navigation Tabs
-    <quasar-tabs slot="navbar" class="layout-navbar primary">
+    <quasar-tabs slot="navbar" class="primary">
       <quasar-tab icon="mail" v-link="{path: '/layout', exact: true}">Mails</quasar-tab>
       <quasar-tab icon="alarm" v-link="'/layout/alarm'">Alarms</quasar-tab>
       <quasar-tab icon="help" v-link="'/layout/help'">Help</quasar-tab>
