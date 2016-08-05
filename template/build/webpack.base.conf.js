@@ -13,7 +13,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: process.env.NODE_ENV === 'production' ? config.build.publicPath : config.dev.publicPath,
-    filename: '[name].js'
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   resolve: {
     extensions: ['', '.js', '.vue'],
@@ -28,15 +29,6 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin()
-  ],
   module: {
     preLoaders: [
       {
@@ -82,10 +74,16 @@ module.exports = {
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
-  vue: {
-    loaders: utils.cssLoaders()
-  },
   postcss: function () {
     return [autoprefixer]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin()
+  ]
 }

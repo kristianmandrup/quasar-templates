@@ -17,11 +17,6 @@ var webpackConfig = merge(baseWebpackConfig, {
     loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true, postcss: true })
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[id].[chunkhash].js'
-  },
   vue: {
     loaders: utils.cssLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -40,7 +35,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     // extract css into its own file
-    new ExtractTextPlugin('css/[name].[contenthash].css'),
+    new ExtractTextPlugin('[name].[contenthash].css'),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

@@ -30,5 +30,8 @@ module.exports = merge(baseWebpackConfig, {
       template: 'src/index.html',
       inject: true
     })
-  ]
+  ],
+  vue: {
+    loaders: utils.cssLoaders()
+  }
 })

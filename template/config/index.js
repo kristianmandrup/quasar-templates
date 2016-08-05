@@ -5,7 +5,7 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
-    publicPath: '/',
+    publicPath: '',
     productionSourceMap: false,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
@@ -17,7 +17,7 @@ module.exports = {
   dev: {
     cssSourceMap: true,
     env: require('./dev.env'),
-    publicPath: '/',
+    publicPath: '',
     port: 8080,
     proxyTable: {}
   }

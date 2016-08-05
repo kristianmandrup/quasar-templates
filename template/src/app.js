@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueTouch from 'vue-touch'
 import Quasar from 'quasar'
-
 import 'velocity-animate'
 import 'velocity-animate/velocity.ui'
 
