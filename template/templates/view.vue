@@ -1,6 +1,11 @@
 <template>
-  <!-- Place content inside a root node -->
-  <div></div>
+  <!-- root node required -->
+  <div>
+    <!-- your content -->
+    <div class="layout-padding">
+      <!-- if you want automatic padding. -->
+    </div>
+  </div>
 </template>
 
 <script>
