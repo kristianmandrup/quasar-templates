@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
-import VueTouch from 'vue-touch'
+// import Vuex from 'vuex'
+// import VueResource from 'vue-resource'
+// import VueTouch from 'vue-touch'
 import Quasar from 'quasar'
 import 'velocity-animate'
 import 'velocity-animate/velocity.ui'
@@ -21,10 +21,10 @@ import 'velocity-animate/velocity.ui'
 // require('./themes/app.' + __THEME + '.styl')
 require('quasar/dist/quasar.' + __THEME + '.css')
 
-Vue.use(Vuex) // State Management
 Vue.use(VueRouter) // Router
-Vue.use(VueResource) // Ajax Requests
-Vue.use(VueTouch) // Touch events
+// Vue.use(Vuex) // State Management
+// Vue.use(VueResource) // Ajax Requests
+// Vue.use(VueTouch) // Touch events
 Vue.use(Quasar) // Install Quasar Framework
 
 let router = new VueRouter()
