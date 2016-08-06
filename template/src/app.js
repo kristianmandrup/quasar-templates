@@ -7,7 +7,19 @@ import Quasar from 'quasar'
 import 'velocity-animate'
 import 'velocity-animate/velocity.ui'
 
-require('./themes/app.' + __THEME + '.styl')
+/*
+  If overriding Quasar style, leave uncommented
+  just the first line.
+
+  If NOT overriding Quasar style, leave uncommented
+  just the second line. This option make compiling faster.
+
+  WARNING!
+  Leave just one of the two require() calls below
+  uncommented.
+ */
+// require('./themes/app.' + __THEME + '.styl')
+require('quasar/dist/quasar.' + __THEME + '.css')
 
 Vue.use(Vuex) // State Management
 Vue.use(VueRouter) // Router
