@@ -1,3 +1,7 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
 /*
   Avoid lazy loading while in dev mode
   to benefit from HMR
@@ -13,7 +17,7 @@ function load (name) {
   }
 }
 
-export default {
+let routes = {
   // Not found
   '*': {
     component: load('error404')
@@ -28,3 +32,8 @@ export default {
     */
   }
 }
+
+let Router = new VueRouter()
+Router.map(routes)
+
+export default Router

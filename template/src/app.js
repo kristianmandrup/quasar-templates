@@ -1,11 +1,16 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import VueTouch from 'vue-touch'
 // import Vuex from 'vuex'
 // import VueResource from 'vue-resource'
 import Quasar from 'quasar'
 import 'velocity-animate'
 import 'velocity-animate/velocity.ui'
+import Router from './router'
+
+Vue.use(VueTouch) // Touch events
+// Vue.use(Vuex) // State Management
+// Vue.use(VueResource) // Ajax Requests
+Vue.use(Quasar) // Install Quasar Framework
 
 /*
   If overriding Quasar style, leave uncommented
@@ -21,17 +26,6 @@ import 'velocity-animate/velocity.ui'
 // require('./themes/app.' + __THEME + '.styl')
 require('quasar/dist/quasar.' + __THEME + '.css')
 
-Vue.use(VueRouter) // Router
-Vue.use(VueTouch) // Touch events
-// Vue.use(Vuex) // State Management
-// Vue.use(VueResource) // Ajax Requests
-Vue.use(Quasar) // Install Quasar Framework
-
-let router = new VueRouter()
-
-import routes from './routes'
-
 Quasar.start(() => {
-  router.map(routes)
-  router.start(Vue.extend({}), '#quasar-app')
+  Router.start(Vue.extend({}), '#quasar-app')
 })
