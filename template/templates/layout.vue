@@ -2,7 +2,9 @@
   <quasar-layout>
     <div slot="header" class="toolbar">
       <!-- opens drawer below
-      <button class="left-drawer-opener"><i>menu</i></button>
+      <button class="left-drawer-opener">
+        <i>menu</i>
+      </button>
       -->
       <quasar-toolbar-title :padding="1">
         Title
@@ -19,12 +21,10 @@
 
     <!-- Drawer
     <quasar-drawer>
-      <div class="toolbar light border-bottom">
-        <div class="toolbar-content">
-          <div class="toolbar-title no-padding">
-            <div>Drawer</div>
-          </div>
-        </div>
+      <div class="toolbar">
+        <quasar-toolbar-title>
+          Drawer Title
+        </quasar-toolbar-title>
       </div>
 
       <div class="list platform-delimiter">
