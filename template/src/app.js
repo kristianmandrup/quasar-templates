@@ -3,8 +3,6 @@ import VueTouch from 'vue-touch'
 // import Vuex from 'vuex'
 // import VueResource from 'vue-resource'
 import Quasar from 'quasar'
-import 'velocity-animate'
-import 'velocity-animate/velocity.ui'
 import Router from './router'
 
 Vue.use(VueTouch) // Touch events
