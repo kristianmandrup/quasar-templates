@@ -6,11 +6,8 @@
       </quasar-toolbar-title>
     </div>
 
-    <div class="layout-view">
-      <!-- Uncomment if using subRoutes
-        <router-view class="layout-scroll-area"></router-view>
-      -->
-    </div>
+    <!-- Replace "div" with "router-view" if using subRoutes -->
+    <div class="layout-view"></div>
   </quasar-layout>
 </template>
 

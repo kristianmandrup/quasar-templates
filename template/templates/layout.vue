@@ -35,13 +35,10 @@
     </quasar-drawer>
     -->
 
-    <div class="layout-view">
-      <router-view class="layout-scroll-area"></router-view>
-    </div>
+    <router-view class="layout-view"></router-view>
 
     <!-- Footer
-    <div slot="footer" class="toolbar">
-    </div>
+    <div slot="footer" class="toolbar"></div>
     -->
   </quasar-layout>
 </template>
