@@ -5,11 +5,6 @@ import VueTouch from 'vue-touch'
 import Quasar from 'quasar'
 import Router from './router'
 
-Vue.use(VueTouch) // Touch events
-// Vue.use(Vuex) // State Management
-// Vue.use(VueResource) // Ajax Requests
-Vue.use(Quasar) // Install Quasar Framework
-
 /*
   If overriding Quasar style, leave uncommented
   just the first line.
@@ -23,6 +18,12 @@ Vue.use(Quasar) // Install Quasar Framework
  */
 // require('./themes/app.' + __THEME + '.styl')
 require('quasar/dist/quasar.' + __THEME + '.css')
+Quasar.theme.set(__THEME)
+
+Vue.use(VueTouch) // Touch events
+// Vue.use(Vuex) // State Management
+// Vue.use(VueResource) // Ajax Requests
+Vue.use(Quasar) // Install Quasar Framework
 
 Quasar.start(() => {
   Router.start(Vue.extend({}), '#quasar-app')
