@@ -1,4 +1,4 @@
-![Quasar Framework logo](http://quasar-framework.org/images/quasar-logo.png)
+![Quasar Framework logo](http://quasar-framework.org/images/logo/xxhdpi.png)
 
 # Quasar Framework Template **v1**
 > Template project folders for Apps using Quasar Framework v0.x and future v1.x
