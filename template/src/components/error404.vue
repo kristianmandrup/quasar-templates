@@ -1,5 +1,5 @@
 <template>
-  <div class="full-height full-width text-white bg-primary column items-center justify-center">
+  <div class="window-height window-width text-white bg-primary column items-center justify-center">
     <h1>Quasar Framework</h1>
     <h5>
       Oops. Nothing to see here...

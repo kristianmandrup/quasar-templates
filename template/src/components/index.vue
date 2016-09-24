@@ -6,7 +6,7 @@
       </quasar-toolbar-title>
     </div>
 
-    <!-- Replace "div" with "router-view" if using subRoutes -->
+    <!-- Replace "div" with "<router-view>" component if using subRoutes -->
     <div class="layout-view"></div>
   </quasar-layout>
 </template>
