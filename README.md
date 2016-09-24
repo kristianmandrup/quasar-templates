@@ -1,7 +1,7 @@
 ![Quasar Framework logo](http://quasar-framework.org/images/logo/xxhdpi.png)
 
 # Quasar Framework Template **v1**
-> Template project folders for Apps using Quasar Framework v0.x and future v1.x
+> Default Starter Kit for a Quasar Framework Project. Compatible with v0.x and future v1.x
 
 ## Usage
 Use Quasar CLI to generate a new project using this template:
