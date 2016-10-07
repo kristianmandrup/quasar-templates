@@ -3,6 +3,13 @@
 # Quasar Framework Template **v1**
 > Default Starter Kit for a Quasar Framework Project. Compatible with v0.x and future v1.x
 
+```
+Repo soon to be deprecated after Quasar port to Vue 2.x is over.
+Templates will have their own repository. The default one
+(currently in progress) can be found at
+https://github.com/rstoenescu/quasar-kit-default
+```
+
 ## Usage
 Use Quasar CLI to generate a new project using this template:
 
