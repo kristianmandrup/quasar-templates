@@ -6,13 +6,6 @@
 ## Description
 **Each branch of this repository contains a template for building Quasar Apps using the Quasar CLI.**
 
-```
-Repo soon to be deprecated after Quasar port to Vue 2.x is over.
-Templates will have their own repository. The default one
-(currently in progress) can be found at
-https://github.com/rstoenescu/quasar-kit-default
-```
-
 # Quasar Framework
 > Build responsive websites and hybrid mobile Apps (that look native!) using same code, with VueJs.
 
