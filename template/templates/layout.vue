@@ -2,7 +2,7 @@
   <quasar-layout>
     <div slot="header" class="toolbar">
       <!-- opens drawer below
-      <button class="left-drawer-opener">
+      <button class="hide-on-drawer-visible" @click="$refs.drawer.open()">
         <i>menu</i>
       </button>
       -->
@@ -13,14 +13,14 @@
 
     <!-- Navigation Tabs
     <quasar-tabs slot="navigation">
-      <quasar-tab icon="mail" v-link="{path: '/layout', exact: true}">Mails</quasar-tab>
-      <quasar-tab icon="alarm" v-link="'/layout/alarm'">Alarms</quasar-tab>
-      <quasar-tab icon="help" v-link="'/layout/help'">Help</quasar-tab>
+      <quasar-tab icon="mail" route="/layout" exact replace>Mails</quasar-tab>
+      <quasar-tab icon="alarm" route="/layout/alarm" exact replace>Alarms</quasar-tab>
+      <quasar-tab icon="help" route="/layout/help" exact replace>Help</quasar-tab>
     </quasar-tabs>
     -->
 
     <!-- Drawer
-    <quasar-drawer>
+    <quasar-drawer ref="drawer">
       <div class="toolbar">
         <quasar-toolbar-title>
           Drawer Title
@@ -28,7 +28,7 @@
       </div>
 
       <div class="list no-border platform-delimiter">
-        <quasar-drawer-link v-link="{path: '/', exact: true}" icon="mail">
+        <quasar-drawer-link icon="mail" to="/" exact>
           Link
         </quasar-drawer-link>
       </div>

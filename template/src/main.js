@@ -1,8 +1,7 @@
 import Vue from 'vue'
-import VueTouch from 'vue-touch'
-// import VueResource from 'vue-resource'
 import Quasar from 'quasar'
-import Router from './router'
+import router from './router'
+import App from './App'
 
 // === DEFAULT / CUSTOM STYLE ===
 // WARNING! always comment out ONE of the two require() calls below.
@@ -13,11 +12,13 @@ require('quasar/dist/quasar.' + __THEME + '.css')
 // ==============================
 
 Quasar.theme.set(__THEME)
-
-Vue.use(VueTouch) // Touch events
-// Vue.use(VueResource) // Ajax Requests
 Vue.use(Quasar) // Install Quasar Framework
 
 Quasar.start(() => {
-  Router.start(Vue.extend({}), '#quasar-app')
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#quasar-app',
+    router,
+    render: h => h(App)
+  })
 })

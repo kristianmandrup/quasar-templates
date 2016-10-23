@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 Vue.use(VueRouter)
 
 /*
@@ -17,23 +18,9 @@ function load (name) {
   }
 }
 
-let routes = {
-  // Not found
-  '*': {
-    component: load('error404')
-  },
-
-  // Default
-  '/': {
-    component: load('index')
-    /*
-    subRoutes: {
-    }
-    */
-  }
-}
-
-let Router = new VueRouter()
-Router.map(routes)
-
-export default Router
+export default new VueRouter({
+  routes: [
+    { path: '/', component: load('index') }, // Default
+    { path: '*', component: load('error404') } // Not found
+  ]
+})
