@@ -1,14 +1,19 @@
 ![Quasar Framework logo](http://quasar-framework.org/images/logo/xxhdpi.png)
 
-# Quasar Framework Templates
-> Starter Kits for Quasar Framework Apps
+# Quasar Framework Template **v2-koa**
+> Default Starter Kit for a Quasar Framework Project. Compatible with Quasar v0.8+
 
-## Description
-**Each branch of this repository contains a template for building Quasar Apps using the Quasar CLI.**
+## Usage
+Use Quasar CLI to generate a new project using this template:
+
+``` bash
+$ quasar init v2-koa <folder-name>
+```
 
 # Quasar Framework
 > Build responsive websites and hybrid mobile Apps (that look native!) using same code, with VueJs.
 
+>>>>>>> 6f739d9e5629d192af784be1df90f010fc027147
 <a href="https://badge.fury.io/js/quasar-framework"><img src="https://badge.fury.io/js/quasar-framework.svg"></a>
 
 ## Supporting Quasar
