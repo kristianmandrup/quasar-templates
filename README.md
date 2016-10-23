@@ -7,7 +7,7 @@
 Use Quasar CLI to generate a new project using this template:
 
 ``` bash
-$ quasar new v2 <folder-name>
+$ quasar init v2 <folder-name>
 ```
 
 # Quasar Framework
